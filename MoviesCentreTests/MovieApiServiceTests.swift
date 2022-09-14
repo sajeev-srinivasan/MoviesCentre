@@ -8,6 +8,7 @@
 import XCTest
 
 @testable import MoviesCentre
+import SwiftUI
 
 class MovieApiServiceTests: XCTestCase {
 
@@ -24,7 +25,25 @@ class MovieApiServiceTests: XCTestCase {
     
     func testShouldGetMoviesIfAPIIsHit() {
         let promise = expectation(description: "Movies list is recieved")
-        let request = URLRequest(url: URL(string: Api.moviesEndPoint)!)
+        let url = URL(string: Api.moviesEndPoint)
+        let data = TestConstants.movieData
+        let response = HTTPURLResponse(url: url!, statusCode: 200, httpVersion: nil, headerFields: nil)
+        let session = URLSessionStub(data: data, response: response, error: nil)
+        sut = MovieApiService(session: session)
         
+        sut.getMovies{
+            (data: [Movie]?, error: Error?) -> Void in
+            if let data = data {
+                print(TestConstants.movies)
+                XCTAssertTrue(data == TestConstants.movies)
+                promise.fulfill()
+            }
+            
+            if let error = error {
+                print(error)
+                XCTFail()
+            }
+        }
+        wait(for: [promise], timeout: 5)
     }
 }
