@@ -20,6 +20,7 @@
 		5E94071228D19FE200E3E1B3 /* TestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E94071128D19FE200E3E1B3 /* TestConstants.swift */; };
 		5E94071528D1A16100E3E1B3 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E94071428D1A16100E3E1B3 /* Movie.swift */; };
 		5E94071728D1A68100E3E1B3 /* ApiParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E94071628D1A68100E3E1B3 /* ApiParser.swift */; };
+		5E94071928D1AF2C00E3E1B3 /* ApiServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E94071828D1AF2C00E3E1B3 /* ApiServiceError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		5E94071128D19FE200E3E1B3 /* TestConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConstants.swift; sourceTree = "<group>"; };
 		5E94071428D1A16100E3E1B3 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		5E94071628D1A68100E3E1B3 /* ApiParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiParser.swift; sourceTree = "<group>"; };
+		5E94071828D1AF2C00E3E1B3 /* ApiServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 			children = (
 				5E94070C28D19A3500E3E1B3 /* MovieApiService.swift */,
 				5E94071628D1A68100E3E1B3 /* ApiParser.swift */,
+				5E94071828D1AF2C00E3E1B3 /* ApiServiceError.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				5E94071528D1A16100E3E1B3 /* Movie.swift in Sources */,
 				5E9406E928D191BA00E3E1B3 /* MoviesCentreApp.swift in Sources */,
 				5E94071028D19DB000E3E1B3 /* Api.swift in Sources */,
+				5E94071928D1AF2C00E3E1B3 /* ApiServiceError.swift in Sources */,
 				5E94070D28D19A3500E3E1B3 /* MovieApiService.swift in Sources */,
 				5E94071728D1A68100E3E1B3 /* ApiParser.swift in Sources */,
 			);

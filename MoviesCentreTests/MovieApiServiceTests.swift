@@ -46,4 +46,23 @@ class MovieApiServiceTests: XCTestCase {
         }
         wait(for: [promise], timeout: 5)
     }
+    
+    func testShouldGetEmptyDataErrorIfThereIsNoDataInResponse(){
+        let promise = expectation(description: "Movies list is recieved")
+        let url = URL(string: Api.moviesEndPoint)
+        let response = HTTPURLResponse(url: url!, statusCode: 200, httpVersion: nil, headerFields: nil)
+        let session = URLSessionStub(data: nil, response: response, error: nil)
+        sut = MovieApiService(session: session)
+        
+        sut.getMovies{
+            (data: [Movie]?, error: Error?) -> Void in
+            if let error = error as? ApiServiceError {
+                switch error {
+                case .emptyData:
+                    promise.fulfill()
+                }
+            }
+        }
+        wait(for: [promise], timeout: 5)
+    }
 }
