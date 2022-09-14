@@ -32,7 +32,7 @@ class MovieApiService{
                 try completion(self.convertToMovies(data: data!), nil)
             }
             catch{
-                completion(nil, error)
+                completion(nil, ApiServiceError.decodingError)
             }
             
         }

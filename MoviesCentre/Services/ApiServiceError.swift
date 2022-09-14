@@ -8,5 +8,5 @@
 import Foundation
 
 enum ApiServiceError: Error{
-    case emptyData, networkError
+    case emptyData, networkError, decodingError
 }

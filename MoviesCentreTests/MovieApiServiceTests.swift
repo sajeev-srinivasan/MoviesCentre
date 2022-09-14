@@ -47,7 +47,7 @@ class MovieApiServiceTests: XCTestCase {
         wait(for: [promise], timeout: 5)
     }
     
-    func testShouldGetEmptyDataErrorIfThereIsNoDataInResponse(){
+    func testShouldGetEmptyDataErrorWhenThereIsNoDataInResponse(){
         let promise = expectation(description: "Movies list is recieved")
         let url = URL(string: Api.moviesEndPoint)
         let response = HTTPURLResponse(url: url!, statusCode: 200, httpVersion: nil, headerFields: nil)
@@ -68,7 +68,7 @@ class MovieApiServiceTests: XCTestCase {
         wait(for: [promise], timeout: 5)
     }
     
-    func testShouldGetNetworkErrorIfThereIsNetworkIssue(){
+    func testShouldGetNetworkErrorWhenThereIsNetworkIssue(){
         let promise = expectation(description: "Movies list is recieved")
         let url = URL(string: Api.moviesEndPoint)
         let response = HTTPURLResponse(url: url!, statusCode: 200, httpVersion: nil, headerFields: nil)
@@ -80,6 +80,27 @@ class MovieApiServiceTests: XCTestCase {
             if let error = error as? ApiServiceError {
                 switch error {
                 case .networkError:
+                    promise.fulfill()
+                
+                default: XCTFail()
+                }
+            }
+        }
+        wait(for: [promise], timeout: 5)
+    }
+    
+    func testShouldGetDecodingErrorWhenThereIsFailedJSONDecoding(){
+        let promise = expectation(description: "Movies list is recieved")
+        let url = URL(string: Api.moviesEndPoint)
+        let response = HTTPURLResponse(url: url!, statusCode: 200, httpVersion: nil, headerFields: nil)
+        let session = URLSessionStub(data: "{}".data(using: .utf8), response: response, error: nil)
+        sut = MovieApiService(session: session)
+        
+        sut.getMovies{
+            (data: [Movie]?, error: Error?) -> Void in
+            if let error = error as? ApiServiceError {
+                switch error {
+                case .decodingError:
                     promise.fulfill()
                 
                 default: XCTFail()
