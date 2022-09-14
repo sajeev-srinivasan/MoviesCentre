@@ -22,6 +22,13 @@ class MovieApiService{
                 completion(nil, ApiServiceError.networkError)
                 return
             }
+
+            if let httpResponse = response as? HTTPURLResponse {
+                if (!(200...299).contains(httpResponse.statusCode)) {
+                    completion(nil, ApiServiceError.badServerResponse(statusCode: httpResponse.statusCode))
+                    return
+                }
+            }
             
             guard data != nil else {
                 completion(nil, ApiServiceError.emptyData)

@@ -109,4 +109,27 @@ class MovieApiServiceTests: XCTestCase {
         }
         wait(for: [promise], timeout: 5)
     }
+    
+    func testShouldGetServerErrorWhenThereIsBadServerResponse(){
+        let promise = expectation(description: "Movies list is recieved")
+        let url = URL(string: Api.moviesEndPoint)
+        let response = HTTPURLResponse(url: url!, statusCode: 500, httpVersion: nil, headerFields: nil)
+        let session = URLSessionStub(data: nil, response: response, error: nil)
+        sut = MovieApiService(session: session)
+        
+        sut.getMovies{
+            (data: [Movie]?, error: Error?) -> Void in
+            if let error = error as? ApiServiceError {
+                switch error {
+                case .badServerResponse(let statusCode):
+                    if statusCode == 500{
+                        promise.fulfill()
+                    }
+                
+                default: XCTFail()
+                }
+            }
+        }
+        wait(for: [promise], timeout: 5)
+    }
 }
