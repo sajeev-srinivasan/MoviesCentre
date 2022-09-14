@@ -18,7 +18,12 @@ class MovieApiService{
         let request = URLRequest(url: URL(string: Api.moviesEndPoint)!)
         let task = session.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
             
-            guard data != nil else{
+            guard error == nil else {
+                completion(nil, ApiServiceError.networkError)
+                return
+            }
+            
+            guard data != nil else {
                 completion(nil, ApiServiceError.emptyData)
                 return
             }

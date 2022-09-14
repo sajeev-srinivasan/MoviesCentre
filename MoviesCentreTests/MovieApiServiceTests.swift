@@ -60,6 +60,29 @@ class MovieApiServiceTests: XCTestCase {
                 switch error {
                 case .emptyData:
                     promise.fulfill()
+                    
+                default: XCTFail()
+                }
+            }
+        }
+        wait(for: [promise], timeout: 5)
+    }
+    
+    func testShouldGetNetworkErrorIfThereIsNetworkIssue(){
+        let promise = expectation(description: "Movies list is recieved")
+        let url = URL(string: Api.moviesEndPoint)
+        let response = HTTPURLResponse(url: url!, statusCode: 200, httpVersion: nil, headerFields: nil)
+        let session = URLSessionStub(data: nil, response: response, error: ApiServiceError.networkError)
+        sut = MovieApiService(session: session)
+        
+        sut.getMovies{
+            (data: [Movie]?, error: Error?) -> Void in
+            if let error = error as? ApiServiceError {
+                switch error {
+                case .networkError:
+                    promise.fulfill()
+                
+                default: XCTFail()
                 }
             }
         }
