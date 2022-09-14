@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MovieApiService{
+class MovieApiService: ApiServiceProtocol{
     var session: URLSessionProtocol
     
     init(session: URLSessionProtocol = URLSession(configuration: .default)){
