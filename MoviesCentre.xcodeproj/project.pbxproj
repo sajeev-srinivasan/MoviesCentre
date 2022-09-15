@@ -25,6 +25,7 @@
 		5E94071F28D1BEEA00E3E1B3 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E94071E28D1BEEA00E3E1B3 /* MovieViewModel.swift */; };
 		5E94072228D1C02C00E3E1B3 /* MockMovieApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E94072128D1C02C00E3E1B3 /* MockMovieApiService.swift */; };
 		5E94072428D1C09400E3E1B3 /* ApiServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E94072328D1C09400E3E1B3 /* ApiServiceProtocol.swift */; };
+		5E94072C28D1D8BD00E3E1B3 /* MovieCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E94072B28D1D8BD00E3E1B3 /* MovieCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		5E94071E28D1BEEA00E3E1B3 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 		5E94072128D1C02C00E3E1B3 /* MockMovieApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMovieApiService.swift; sourceTree = "<group>"; };
 		5E94072328D1C09400E3E1B3 /* ApiServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceProtocol.swift; sourceTree = "<group>"; };
+		5E94072B28D1D8BD00E3E1B3 /* MovieCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		5E9406E728D191BA00E3E1B3 /* MoviesCentre */ = {
 			isa = PBXGroup;
 			children = (
+				5E94072A28D1D88D00E3E1B3 /* Views */,
 				5E94071D28D1BED300E3E1B3 /* ViewModel */,
 				5E94071328D1A15600E3E1B3 /* Model */,
 				5E94070E28D19DA400E3E1B3 /* Resources */,
@@ -143,7 +146,6 @@
 		5E94070828D1948000E3E1B3 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				5E9406EA28D191BA00E3E1B3 /* ContentView.swift */,
 				5E94070928D194B100E3E1B3 /* URLSessionProtocol.swift */,
 				5E94072328D1C09400E3E1B3 /* ApiServiceProtocol.swift */,
 			);
@@ -190,6 +192,15 @@
 				5E94072128D1C02C00E3E1B3 /* MockMovieApiService.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		5E94072A28D1D88D00E3E1B3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5E9406EA28D191BA00E3E1B3 /* ContentView.swift */,
+				5E94072B28D1D8BD00E3E1B3 /* MovieCardView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +310,7 @@
 				5E9406E928D191BA00E3E1B3 /* MoviesCentreApp.swift in Sources */,
 				5E94071028D19DB000E3E1B3 /* Api.swift in Sources */,
 				5E94071F28D1BEEA00E3E1B3 /* MovieViewModel.swift in Sources */,
+				5E94072C28D1D8BD00E3E1B3 /* MovieCardView.swift in Sources */,
 				5E94071928D1AF2C00E3E1B3 /* ApiServiceError.swift in Sources */,
 				5E94070D28D19A3500E3E1B3 /* MovieApiService.swift in Sources */,
 				5E94071728D1A68100E3E1B3 /* ApiParser.swift in Sources */,

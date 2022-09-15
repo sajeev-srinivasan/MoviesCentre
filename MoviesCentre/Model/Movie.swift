@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Movie:Equatable {
+struct Movie:Equatable, Hashable{
     var title: String
     var description: String
     var rating: Float
