@@ -8,9 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject private var viewModel: MovieViewModel = MovieViewModel()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+            ScrollView{
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 150))]) {
+                    ForEach(viewModel.movies, id: \.self) { movie in
+                        MovieCardView(movieURL: movie.poster)
+                    }
+                }
+            }.background(.black)
     }
 }
 
