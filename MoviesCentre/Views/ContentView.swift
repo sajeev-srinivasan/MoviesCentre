@@ -12,13 +12,18 @@ struct ContentView: View {
     @ObservedObject private var viewModel: MovieViewModel = MovieViewModel()
     
     var body: some View {
+        NavigationView {
             ScrollView{
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 150))]) {
                     ForEach(viewModel.movies, id: \.self) { movie in
-                        MovieCardView(movieURL: movie.poster)
+                        NavigationLink(destination: MovieDetailView(movie: movie)) {
+                            MovieCardView(movieURL: movie.poster).cornerRadius(20)
+                        }.foregroundColor(.black)
                     }
                 }
             }.background(.black)
+                .navigationTitle("Movie")
+        }
     }
 }
 
