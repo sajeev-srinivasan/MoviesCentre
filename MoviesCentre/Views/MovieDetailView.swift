@@ -28,12 +28,13 @@ struct MovieDetailView: View {
                     .foregroundColor(.white)
                     .multilineTextAlignment(.leading)
                     .padding(.leading, 10)
-                
+
+                    
                 Text("Rating: \(movie.rating.formatted())")
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.leading, 10)
-                    .padding(.top, 5)
+                    .padding(.leading, 13)
+                    .padding(.top, 3)
                     
             }
         }.background(.black)
