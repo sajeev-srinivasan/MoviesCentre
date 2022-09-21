@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5E9406E928D191BA00E3E1B3 /* MoviesCentreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9406E828D191BA00E3E1B3 /* MoviesCentreApp.swift */; };
-		5E9406EB28D191BA00E3E1B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9406EA28D191BA00E3E1B3 /* ContentView.swift */; };
+		5E9406EB28D191BA00E3E1B3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9406EA28D191BA00E3E1B3 /* MainView.swift */; };
 		5E9406ED28D191BC00E3E1B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E9406EC28D191BC00E3E1B3 /* Assets.xcassets */; };
 		5E9406F028D191BC00E3E1B3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E9406EF28D191BC00E3E1B3 /* Preview Assets.xcassets */; };
 		5E9406FD28D192FA00E3E1B3 /* MoviesCentreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9406FC28D192FA00E3E1B3 /* MoviesCentreTests.swift */; };
@@ -42,7 +42,7 @@
 /* Begin PBXFileReference section */
 		5E9406E528D191BA00E3E1B3 /* MoviesCentre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesCentre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E9406E828D191BA00E3E1B3 /* MoviesCentreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCentreApp.swift; sourceTree = "<group>"; };
-		5E9406EA28D191BA00E3E1B3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5E9406EA28D191BA00E3E1B3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		5E9406EC28D191BC00E3E1B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E9406EF28D191BC00E3E1B3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5E9406FA28D192FA00E3E1B3 /* MoviesCentreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviesCentreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,7 +199,7 @@
 		5E94072A28D1D88D00E3E1B3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5E9406EA28D191BA00E3E1B3 /* ContentView.swift */,
+				5E9406EA28D191BA00E3E1B3 /* MainView.swift */,
 				5E94072B28D1D8BD00E3E1B3 /* MovieCardView.swift */,
 				5EA329DA28D30105000C7576 /* MovieDetailView.swift */,
 			);
@@ -307,7 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E94070A28D194B100E3E1B3 /* URLSessionProtocol.swift in Sources */,
-				5E9406EB28D191BA00E3E1B3 /* ContentView.swift in Sources */,
+				5E9406EB28D191BA00E3E1B3 /* MainView.swift in Sources */,
 				5E94072428D1C09400E3E1B3 /* ApiServiceProtocol.swift in Sources */,
 				5E94071528D1A16100E3E1B3 /* Movie.swift in Sources */,
 				5E9406E928D191BA00E3E1B3 /* MoviesCentreApp.swift in Sources */,
