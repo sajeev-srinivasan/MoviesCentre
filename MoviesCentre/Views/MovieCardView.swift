@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MovieCardView: View {
     
-    var movieURL: String = "https://m.media-amazon.com/images/M/MV5BMTg0NTM3MTI1MF5BMl5BanBnXkFtZTgwMTAzNTAzNzE@._V1_.jpg"
+    let movieURL: String
     
     var body: some View {
         ZStack {
@@ -45,6 +45,6 @@ struct MovieCardView: View {
 
 struct MovieCardView_Previews: PreviewProvider {
     static var previews: some View {
-        MovieCardView()
+        MovieCardView(movieURL: "https://m.media-amazon.com/images/M/MV5BMTg0NTM3MTI1MF5BMl5BanBnXkFtZTgwMTAzNTAzNzE@._V1_.jpg")
     }
 }
