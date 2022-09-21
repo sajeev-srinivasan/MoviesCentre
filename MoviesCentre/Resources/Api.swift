@@ -8,5 +8,8 @@
 import Foundation
 
 struct Api {
-    static let moviesEndPoint = "https://tw-mobile-hiring.web.app/interview_ios.json"
+    
+    static let URL = "https://tw-mobile-hiring.web.app/"
+    
+    static let moviesEndPoint = "interview_ios.json"
 }

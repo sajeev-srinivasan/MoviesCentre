@@ -15,7 +15,7 @@ class MovieApiService: ApiServiceProtocol{
     }
     
     func getMovies(completion: @escaping ([Movie]?, Error?) -> Void){
-        let request = URLRequest(url: URL(string: Api.moviesEndPoint)!)
+        let request = URLRequest(url: URL(string: Api.URL + Api.moviesEndPoint)!)
         let task = session.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
             
             guard error == nil else {

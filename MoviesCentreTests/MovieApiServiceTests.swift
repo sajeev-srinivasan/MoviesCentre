@@ -49,7 +49,7 @@ class MovieApiServiceTests: XCTestCase {
     
     func testShouldGetEmptyDataErrorWhenThereIsNoDataInResponse(){
         let promise = expectation(description: "Movies list is recieved")
-        let url = URL(string: Api.moviesEndPoint)
+        let url = URL(string: Api.URL + Api.moviesEndPoint)
         let response = HTTPURLResponse(url: url!, statusCode: 200, httpVersion: nil, headerFields: nil)
         let session = URLSessionStub(data: nil, response: response, error: nil)
         sut = MovieApiService(session: session)
@@ -70,7 +70,7 @@ class MovieApiServiceTests: XCTestCase {
     
     func testShouldGetNetworkErrorWhenThereIsNetworkIssue(){
         let promise = expectation(description: "Movies list is recieved")
-        let url = URL(string: Api.moviesEndPoint)
+        let url = URL(string: Api.URL + Api.moviesEndPoint)
         let response = HTTPURLResponse(url: url!, statusCode: 200, httpVersion: nil, headerFields: nil)
         let session = URLSessionStub(data: nil, response: response, error: ApiServiceError.networkError)
         sut = MovieApiService(session: session)
@@ -91,7 +91,7 @@ class MovieApiServiceTests: XCTestCase {
     
     func testShouldGetDecodingErrorWhenThereIsFailedJSONDecoding(){
         let promise = expectation(description: "Movies list is recieved")
-        let url = URL(string: Api.moviesEndPoint)
+        let url = URL(string: Api.URL + Api.moviesEndPoint)
         let response = HTTPURLResponse(url: url!, statusCode: 200, httpVersion: nil, headerFields: nil)
         let session = URLSessionStub(data: "{}".data(using: .utf8), response: response, error: nil)
         sut = MovieApiService(session: session)
@@ -112,7 +112,7 @@ class MovieApiServiceTests: XCTestCase {
     
     func testShouldGetServerErrorWhenThereIsBadServerResponse(){
         let promise = expectation(description: "Movies list is recieved")
-        let url = URL(string: Api.moviesEndPoint)
+        let url = URL(string: Api.URL + Api.moviesEndPoint)
         let response = HTTPURLResponse(url: url!, statusCode: 500, httpVersion: nil, headerFields: nil)
         let session = URLSessionStub(data: nil, response: response, error: nil)
         sut = MovieApiService(session: session)
