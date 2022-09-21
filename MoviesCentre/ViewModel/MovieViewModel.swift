@@ -12,6 +12,8 @@ class MovieViewModel: ObservableObject {
     @Published var movies: [Movie] = []
     private var movieApi: ApiServiceProtocol
     
+    var navigationTitle: String = "Movie"
+    
     init(movieApi: ApiServiceProtocol = MovieApiService()) {
         self.movieApi = movieApi
         loadMovies()

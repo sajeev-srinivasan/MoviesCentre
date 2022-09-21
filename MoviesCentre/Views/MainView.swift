@@ -22,12 +22,12 @@ struct MainView: View {
                     }
                 }
             }.background(.black)
-                .navigationTitle("Movies")
+                .navigationTitle(viewModel.navigationTitle)
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .principal) {
                         VStack{
-                            Text("Movies")
+                            Text(viewModel.navigationTitle)
                                 .font(.headline)
                                 .foregroundColor(.white)
                         }
