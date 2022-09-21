@@ -28,8 +28,12 @@ class MovieViewModel: ObservableObject {
             return
         }
         
+        guard let data = data else {
+            return
+        }
+        
         DispatchQueue.main.async { [weak self] in
-            self?.movies = data!
+            self?.movies = data
         }
     }
 }

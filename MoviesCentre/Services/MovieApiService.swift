@@ -30,13 +30,13 @@ class MovieApiService: ApiServiceProtocol{
                 }
             }
             
-            guard data != nil else {
+            guard let data = data else {
                 completion(nil, ApiServiceError.emptyData)
                 return
             }
             
             do{
-                try completion(self.convertToMovies(data: data!), nil)
+                try completion(self.convertToMovies(data: data), nil)
             }
             catch{
                 completion(nil, ApiServiceError.decodingError)
