@@ -22,8 +22,19 @@ struct ContentView: View {
                     }
                 }
             }.background(.black)
-                .navigationTitle("Movie")
-        }
+                .navigationTitle("Movies")
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .principal) {
+                        VStack{
+                            Text("Movies")
+                                .font(.headline)
+                                .foregroundColor(.white)
+                        }
+                    }
+                }
+            
+        }.accentColor(.white)
     }
 }
 
