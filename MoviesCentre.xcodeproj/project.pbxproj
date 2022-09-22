@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E045B0728DC202900267D49 /* MovieCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E045B0628DC202900267D49 /* MovieCardViewModel.swift */; };
 		5E9406E928D191BA00E3E1B3 /* MoviesCentreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9406E828D191BA00E3E1B3 /* MoviesCentreApp.swift */; };
 		5E9406EB28D191BA00E3E1B3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9406EA28D191BA00E3E1B3 /* MainView.swift */; };
 		5E9406ED28D191BC00E3E1B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E9406EC28D191BC00E3E1B3 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E045B0628DC202900267D49 /* MovieCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCardViewModel.swift; sourceTree = "<group>"; };
 		5E9406E528D191BA00E3E1B3 /* MoviesCentre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesCentre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E9406E828D191BA00E3E1B3 /* MoviesCentreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCentreApp.swift; sourceTree = "<group>"; };
 		5E9406EA28D191BA00E3E1B3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				5E94071E28D1BEEA00E3E1B3 /* MovieViewModel.swift */,
+				5E045B0628DC202900267D49 /* MovieCardViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				5E94071528D1A16100E3E1B3 /* Movie.swift in Sources */,
 				5E9406E928D191BA00E3E1B3 /* MoviesCentreApp.swift in Sources */,
 				5E94071028D19DB000E3E1B3 /* Api.swift in Sources */,
+				5E045B0728DC202900267D49 /* MovieCardViewModel.swift in Sources */,
 				5EA329DB28D30105000C7576 /* MovieDetailView.swift in Sources */,
 				5E94071F28D1BEEA00E3E1B3 /* MovieViewModel.swift in Sources */,
 				5E94072C28D1D8BD00E3E1B3 /* MovieCardView.swift in Sources */,

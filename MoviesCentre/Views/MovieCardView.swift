@@ -11,6 +11,8 @@ struct MovieCardView: View {
     
     let movieURL: String
     
+    let cardViewModel: MovieCardViewModel = MovieCardViewModel()
+    
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 20)
@@ -22,12 +24,12 @@ struct MovieCardView: View {
                 }
                 
                 else if phase.error != nil {
-                    Image(systemName: "nosign.app.fill")
+                    Image(systemName: cardViewModel.noDataImage)
                         .resizable()
                         .foregroundColor(Color.red)
                         .frame(width: 25, height: 25, alignment: .center)
                     
-                    Text("Preview not available")
+                    Text(cardViewModel.noDataText)
                         .padding(/*@START_MENU_TOKEN@*/.top/*@END_MENU_TOKEN@*/)
                         .foregroundColor(.white)
                 }
