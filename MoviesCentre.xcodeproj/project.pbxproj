@@ -110,7 +110,6 @@
 				5E94070B28D19A2400E3E1B3 /* Services */,
 				5E94070828D1948000E3E1B3 /* Protocols */,
 				5E9406E828D191BA00E3E1B3 /* MoviesCentreApp.swift */,
-				5E9406EC28D191BC00E3E1B3 /* Assets.xcassets */,
 				5E9406EE28D191BC00E3E1B3 /* Preview Content */,
 			);
 			path = MoviesCentre;
@@ -167,6 +166,7 @@
 		5E94070E28D19DA400E3E1B3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5E9406EC28D191BC00E3E1B3 /* Assets.xcassets */,
 				5E94070F28D19DB000E3E1B3 /* Api.swift */,
 			);
 			path = Resources;
