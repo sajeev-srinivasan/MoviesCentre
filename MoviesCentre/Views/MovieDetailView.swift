@@ -30,7 +30,7 @@ struct MovieDetailView: View {
                     .padding(.leading, 10)
 
                     
-                Text(movie.rating.formatted())
+                Text(movie.ratingFormatted)
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.leading, 13)

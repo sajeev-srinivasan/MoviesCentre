@@ -11,5 +11,8 @@ struct Movie:Equatable, Hashable{
     var title: String
     var description: String
     var rating: Float
+    var ratingFormatted: String {
+        return "Rating: \(rating)"
+    }
     var poster: String
 }
